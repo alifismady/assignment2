@@ -65,6 +65,16 @@ Template ini dibuat berdasarkan [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pb
 Link App : https://tugas-2-pbp-muhammadalifismady.herokuapp.com/katalog/
 
 Jawaban pertanyaan
-1. 
-2.
-3. Pertama, fungsi yang dibuat adalah show_katalog dimana fungsi ini akan mereturn data list item yang diambil dari models dan direturn dalam bentuk html dengan nama file katalog. Membuat routing pada urls dengan import fungsi show_katalog dari views. Kemudian menambahkan data item dengan iterasi pada file katalog.html . Setelah tes dengan localhost, melakukan deployment ke heroku dengan membuat file txt yang berisi API dari akun heroku dan nama aplikasi yang telah dibuat. Setelah itu melakukan git add, commit, dan push, lalu mengecek pada actions di github untuk lihat apakah deployment berhasil atau tidak.
+
+1.Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html
+![1_5tlbCdsQHDW38Yn1eP97Kg](https://user-images.githubusercontent.com/112617789/190299779-c0f4a0de-e572-4adf-a8b6-804ae4a0031d.jpeg)
+(Sumber foto : https://medium.com/@ahmadzuliamrullah/belajar-django-framework-81385df4565)
+Berdasarkan ilustrasi dari arsitektur tersebut, terlihat bahwa yang pertama kali dilakukan adalah request dari user ke django yang nantinya akan pertama melalui urls yang selanjutnya diteruskan ke views. Setelah masuk kedalam views, developer akan menganggap request ini untuk segera diproses. Pemrosesan request akan masuk ke data base lalu dikembalikan menuju models. Hasil dari data pada models ini akan dikembalikan lagi kedalam views, lalu data yang didapatkan akan dipetakan dalam bentuk html yang selanjutnya akan dapat dikembalikan lagi ke user.
+
+
+
+2.Jelaskan kenapa menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
+Virtual enviroment adalah tools untuk kita membuat enviroment python  virtual yang terisolasi, yang artinya tertutup dan tidak bisa diakses dari luar. Program Python yang berjalan didalam virtual enviroment memiliiki modul tersendiri dan program ini tidak bisa diakses dari luar. Virtual Enviroment merupakan dedicated enviroment untuk projek django yang kita buat. Menggunakan Virtual Enviroment bukan merupakan hal yang wajib tetapi dengan melakukan ini berarti kita telah melakukan best practice dan memudahkan kita untuk mendeploy projek yang kita buat.
+
+3. Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di atas.
+Pertama, fungsi yang dibuat adalah show_katalog dimana fungsi ini akan mereturn data list item yang diambil dari models dan direturn dalam bentuk html dengan nama file katalog. Membuat routing pada urls dengan import fungsi show_katalog dari views. Kemudian menambahkan data item dengan iterasi pada file katalog.html . Setelah tes dengan localhost, melakukan deployment ke heroku dengan membuat file txt yang berisi API dari akun heroku dan nama aplikasi yang telah dibuat. Setelah itu melakukan git add, commit, dan push, lalu mengecek pada actions di github untuk lihat apakah deployment berhasil atau tidak.
