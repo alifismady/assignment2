@@ -1,0 +1,113 @@
+[
+    {
+
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "films_watched":"Watched",
+            "films_title":"Mencuri Raden Saleh",
+            "films_rating": "4",
+            "films_release_date": "25 Agustus 2022",
+            "films_review": "Film action dan drama yang dibungkus dengan komedi yang baik"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "films_watched":"Watched",
+            "films_title":"Avengers Infinity War",
+            "films_rating": "4",
+            "films_release_date": "April 2017",
+            "films_review": "Film dari MCU yang merupakan film ketiga, memiliki action yang bagus dengan komedi menarik"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "films_watched":"Not Watched Yet",
+            "films_title":"Miracle in Cell No.7",
+            "films_rating": "5",
+            "films_release_date": "September 2022",
+            "films_review": "Merupakan remake film dari original. Berkisah tentang seorang gadis yang berusaha memperbaiki nama ayahnya"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "films_watched":"Watched",
+            "films_title":"The Batman",
+            "films_rating": "5",
+            "films_release_date": "Februari 2022",
+            "films_review": "Film batman terbaik (debatable). Cinematografi terbaiik dan sound terbaik."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "films_watched":"Not Watched Yet",
+            "films_title":"The Good Doctor",
+            "films_rating": "3",
+            "films_release_date": "Maret 2015",
+            "films_review": "Berkisah tentang seorang dokter yang punya keahlian lebih"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "films_watched":"Watched",
+            "films_title":"Life of Pi",
+            "films_rating": "5",
+            "films_release_date": "June 2012",
+            "films_review": "Richard Parker is da goat"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "films_watched":"Watched",
+            "films_title":"Hotel Mumbai",
+            "films_rating": "5",
+            "films_release_date": "April 2020",
+            "films_review": "Based on true story. Film thrill action yang dikemas dengan sangat baik dengan aktor yang ahli."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "films_watched":"Watched",
+            "films_title":"Avatar",
+            "films_rating": "4",
+            "films_release_date": "2011",
+            "films_review": "Salah satu film yang memulai dunia perfilman dan merupakan film dengan penonton terbanyak."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "films_watched":"Watched",
+            "films_title":"Spirited Away",
+            "films_rating": "5",
+            "films_release_date": "2006",
+            "films_review": "One of the best ghibli movies. Prince Haku love :3."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "films_watched":"Watched",
+            "films_title":"Kimi no Nawa",
+            "films_rating": "5",
+            "films_release_date": "2016",
+            "films_review": "Salah satu film genre anime yang terbaik dan memiliki plot 10/10."
+        }
+    }
+]
