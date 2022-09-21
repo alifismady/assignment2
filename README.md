@@ -1,5 +1,6 @@
 # Template Proyek Django PBP
 # Kak untuk jawaban tugas 2 dibawah soalnya saya gatau ini dihapus atau tidak
+# Untuk jawaban tugas 3 dibawah jawaban tugas 2
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
 
@@ -78,3 +79,17 @@ Virtual enviroment adalah tools untuk kita membuat enviroment python  virtual ya
 
 3. Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di atas.
 Pertama, fungsi yang dibuat adalah show_katalog dimana fungsi ini akan mereturn data list item yang diambil dari models dan direturn dalam bentuk html dengan nama file katalog. Membuat routing pada urls dengan import fungsi show_katalog dari views. Kemudian menambahkan data item dengan iterasi pada file katalog.html . Setelah tes dengan localhost, melakukan deployment ke heroku dengan membuat file txt yang berisi API dari akun heroku dan nama aplikasi yang telah dibuat. Setelah itu melakukan git add, commit, dan push, lalu mengecek pada actions di github untuk lihat apakah deployment berhasil atau tidak.
+
+Tugas 3
+Link App : https://tugas-2-pbp-muhammadalifismady.herokuapp.com/mywatchlist/
+1. Perbedaan antara
+2. Kita perlu melakukan data delivery karena
+3. Pertama, saya startapp bernama mywatchlist pada terminal directory rep saya. Kemudian menambahkan path mywatchlist pada urls pada project_django. Kemudian menambahkan model untuk watchlist pada file models.py. Kemudian saya membuat file json yang berisi 10 data untuk objek mywatchlist dan menaruh models itu pada folder bernama fixtures. Kemudian saya implementasikan fitur untuk menyajikan data. Untuk html, saya membuat file html pada templates dengan menggunakan fungsi yang saya gunakan pada tugas 2. Kemudian saya membuat fungsi pada views yang akan mengambil data. Untuk json dan xml saya membuat fungsi pada views yang akan di import ke file urls yang nantinya agar bisa di routing pada local host. Saya juga tidak lupa untuk make migrations migrate dan loaddata untuk file json agar data dapat masuk ke database. Untuk deployment, saya menambahkan fungsi migrations migrate dan loaddata untuk fil ejson mywatchlist agar dapat masuk ke heroku. Setelah itu saya melakukan git add git commit dan git push agra deployment dapat dilakukan. 
+
+Screenshot Postman
+1. HTML![messageImage_1663763379995](https://user-images.githubusercontent.com/112617789/191504463-0191d243-627e-4178-ba91-6dc4e60f006d.jpg)
+
+2. XML![messageImage_1663763394871](https://user-images.githubusercontent.com/112617789/191504495-08dbc87e-6c27-4a77-a0ca-d1c83f860e54.jpg)
+
+3. JSON![messageImage_1663763514932](https://user-images.githubusercontent.com/112617789/191504530-0b58042e-9690-458d-874e-75ab061c7a60.jpg)
+
