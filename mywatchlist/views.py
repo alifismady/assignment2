@@ -1,3 +1,4 @@
+from email import message_from_binary_file
 from itertools import count
 from django.shortcuts import render
 from mywatchlist.models import MyWatchList
@@ -25,10 +26,25 @@ def show_json_by_id(request,id):
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 data_watchlist_items = MyWatchList.objects.all()
+count_yes = 0
+count_no = 0
+message = ""
+watched = "Watched"
+not_watched = "Not Watched"
+for films in data_watchlist_items:
+    if films.films_watched == "Watched":
+        count_yes += 1
+    elif films.films_watched == "Not Watched":
+        count_no += 1
+
+if count_yes > count_no:
+    message = "Selamat, kamu sudah banyak menonton!"
+elif count_no > count_yes:
+    message = "Wah, kamu masih sedikit menonton!"
 
 context = {
     'list_item': data_watchlist_items,
-    'name': 'Muhammad Alif Ismady',
+    'message':message
     
 }
 
