@@ -1,3 +1,4 @@
+from itertools import count
 from django.shortcuts import render
 from mywatchlist.models import MyWatchList
 from django.http import HttpResponse
@@ -24,7 +25,10 @@ def show_json_by_id(request,id):
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 data_watchlist_items = MyWatchList.objects.all()
+
 context = {
     'list_item': data_watchlist_items,
-    'name': 'Muhammad Alif Ismady'
+    'name': 'Muhammad Alif Ismady',
+    
 }
+

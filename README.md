@@ -82,8 +82,10 @@ Pertama, fungsi yang dibuat adalah show_katalog dimana fungsi ini akan mereturn 
 
 Tugas 3
 Link App : https://tugas-2-pbp-muhammadalifismady.herokuapp.com/mywatchlist/
-1. Perbedaan antara
-2. Kita perlu melakukan data delivery karena
+1. Perbedaan antara html, xml, dan json. Html dan Xml merupakan bahasa yang menggunakan teks penandaan. Html diugnakan untuk menyusun hal atau teks pada halaman web agar dapat ditampilkan dengan benar. XML umumnya digunakan untuk menyusun data atau pesan. JSON digunakan untuk merepresentasikan data sebagai pasangan nilai kunci, yang dapat dengan mudah dikonversi ke dan dari objek JavaScript
+
+2. Kita perlu melakukan data delivery karena hal ini menguntukan saat kita ingin implementasi sautu platform. Dalam penggunaan platform akan banyak terjadi pertukaran data antara client dan server. Untuk melakukan update, create, delete, pertukaran ini akan mudah untuk dikomunikasikan dengan data delivery. Untuk melakukan data delivery bisa menggunakan html, xml, atau json
+
 3. Pertama, saya startapp bernama mywatchlist pada terminal directory rep saya. Kemudian menambahkan path mywatchlist pada urls pada project_django. Kemudian menambahkan model untuk watchlist pada file models.py. Kemudian saya membuat file json yang berisi 10 data untuk objek mywatchlist dan menaruh models itu pada folder bernama fixtures. Kemudian saya implementasikan fitur untuk menyajikan data. Untuk html, saya membuat file html pada templates dengan menggunakan fungsi yang saya gunakan pada tugas 2. Kemudian saya membuat fungsi pada views yang akan mengambil data. Untuk json dan xml saya membuat fungsi pada views yang akan di import ke file urls yang nantinya agar bisa di routing pada local host. Saya juga tidak lupa untuk make migrations migrate dan loaddata untuk file json agar data dapat masuk ke database. Untuk deployment, saya menambahkan fungsi migrations migrate dan loaddata untuk fil ejson mywatchlist agar dapat masuk ke heroku. Setelah itu saya melakukan git add git commit dan git push agra deployment dapat dilakukan. 
 
 Screenshot Postman
