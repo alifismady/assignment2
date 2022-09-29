@@ -96,6 +96,10 @@ Screenshot Postman
 3. JSON![messageImage_1663763514932](https://user-images.githubusercontent.com/112617789/191504530-0b58042e-9690-458d-874e-75ab061c7a60.jpg)
 
 Jawaban Tugas 4
+Link App : https://tugas-2-pbp-muhammadalifismady.herokuapp.com/todolist/
+Dummy Acc:
+1. user : DummyAcc1 ; pass: passakun1
+2. user : DummyAcc2 ; pass: passakun2
 
 1. Kegunaan dari {% csrf_token %} adalah untuk mencegah penyerangan CRSF dengan membuat orang yang ingin menyerang membuat sebuah HTTP request yang valid. CRSF token sendiri adalah token yang unik, rahasia, dan tidak bisa diperkirakan yang di buat oleh server dan di transmit ke client. Saat request dibuat, server akan cek semua hal termasuk token, apakah token tersebut valid atau invalid. Dengan CRSFH, user yang tidak terverivikasi tidak akan bisa menggunakan data-data yang terdapat pada server yang dimiliki oleh orang lain.
 
