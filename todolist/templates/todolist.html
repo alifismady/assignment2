@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Assignment 4 PBP/PBD</h1>
+
+<h5>Name: </h5>
+<b>{{user.username}}</b>
+
+<table>
+    <table border="1">
+    <tr>
+    <th>Date</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Status Task</th>
+    <th>Ubah Status</th>
+    <th>Hapus Task</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% comment %} Add the data below this line {% endcomment %}
+    
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for item in list_item %}
+
+        <tr>
+            <th>{{item.date}}</th>
+            <th>{{item.title}}</th>
+            <th>{{item.description}}</th>
+            {% if item.is_finished == True %}
+            <th>Selesai</th>
+            {% else %}
+            <th>Belum Selesai</th>
+            {% endif %}
+            <td><button><a href="{% url 'todolist:finished_task' item.id %}">Tombol Ubah</a></button></td>
+            <td><button><a href="{% url 'todolist:delete_task' item.id %}">Tombol Delete</a></button></td>
+        </tr>
+    {% endfor %}
+
+  </table>
+</table>
+<button><a href="{% url 'todolist:create_task' %}">CreateTask</a></button>
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+{% endblock content %}

@@ -95,3 +95,26 @@ Screenshot Postman
 
 3. JSON![messageImage_1663763514932](https://user-images.githubusercontent.com/112617789/191504530-0b58042e-9690-458d-874e-75ab061c7a60.jpg)
 
+Jawaban Tugas 4
+
+1. Kegunaan dari {% csrf_token %} adalah untuk mencegah penyerangan CRSF dengan membuat orang yang ingin menyerang membuat sebuah HTTP request yang valid. CRSF token sendiri adalah token yang unik, rahasia, dan tidak bisa diperkirakan yang di buat oleh server dan di transmit ke client. Saat request dibuat, server akan cek semua hal termasuk token, apakah token tersebut valid atau invalid. Dengan CRSFH, user yang tidak terverivikasi tidak akan bisa menggunakan data-data yang terdapat pada server yang dimiliki oleh orang lain.
+
+2. Kita dapat membuat form secara manual tanpa harus menggunakan generator dengan menggunakan <form>. Contoh kode form :
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required>
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!">
+  </div>
+</form>
+
+3. Proses alur data :
+Setelah user meminta, akan diminta request ke localhost/path pada browser, server akan menerima HTTP request pada localhost/path tersebut kemudian melihat fungsi pada views.py yang sesuai dengan permintaan. Fungsi itu kemudian akan menghasilkan halaman form HTML yang akan ditampilkan oleh user. Setelah diisi dan disubmit, browser akan menghasilkan HTTP request ke url yang dituju sesuai HTML form. Hal selanjutnya bergantung kepada kode dimana kalau kode itu diminta menampilkan HTML(pada views.py) maka browser akan menampilkan HTML kepada user
+
+4. Pertama membuat app baru yang bernama todolist menggunakan startapp. Menambahkan path todolist pada urls.py agar dapat diakses. Membuat class ToDoList pada models.py dan melakukan migrate agar fungsi masuk kedalam base. Membuat fungsi untuk register,login,dan logout pada views.py, kemudian menambahkan urls, lalu membuat html untuk register dan login. Membuat HTML utama todolist, yang akan berisi username, task yang ada, lalu tombol create baru dan logout. Routing dibuat pada urls.py. Deployment dilakukan dengan git add. git commit, git push. 
