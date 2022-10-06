@@ -1,43 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <b class="navbar-brand" style = "color:#efeff3; margin-left: 10px; margin-right: 1100px; text-align: center;">Selamat Datang, </b>
+        <b class="navbar-brand" style = "color:#efeff3; margin-left: 10px; margin-right: 1100px; text-align: center;">{{user}} </b>
+        <button type="button" class="btn btn-light" style="color: #efeff3;"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    </div>
+</nav>
 <h1>Assignment 4 PBP/PBD</h1>
 
 <h5>Name: </h5>
 <b>{{user.username}}</b>
 
-<table>
-    <table border="1">
-    <tr>
-    <th>Date</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Status Task</th>
-    <th>Ubah Status</th>
-    <th>Hapus Task</th>
-    </tr>
-    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-    {% comment %} Add the data below this line {% endcomment %}
-    
-    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-    {% for item in list_item %}
+{% for item in list_item %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.date}}</p>
+      <p class="card-text">{{item.description}}</p>
+      {% if item.is_finished == True %}
+        <p class="card-text">Selesai</p>
+    {% else %}
+        <p class="card-text">Belum Selesai</p>
+    {% endif %}
+    <button><a href="{% url 'todolist:delete_task' item.id %}">Tombol Delete</a></button>
+    </div>
+  </div>
+{% endfor %}
 
-        <tr>
-            <th>{{item.date}}</th>
-            <th>{{item.title}}</th>
-            <th>{{item.description}}</th>
-            {% if item.is_finished == True %}
-            <th>Selesai</th>
-            {% else %}
-            <th>Belum Selesai</th>
-            {% endif %}
-            <td><button><a href="{% url 'todolist:finished_task' item.id %}">Tombol Ubah</a></button></td>
-            <td><button><a href="{% url 'todolist:delete_task' item.id %}">Tombol Delete</a></button></td>
-        </tr>
-    {% endfor %}
 
-  </table>
-</table>
 <button><a href="{% url 'todolist:create_task' %}">CreateTask</a></button>
 <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
 {% endblock content %}
